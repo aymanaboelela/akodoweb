@@ -32,6 +32,19 @@
   <title>house_app_one</title>
   <link rel="manifest" href="manifest.json">
 
+  <style>
+    /* تحديد لون الخلفية ولون النص */
+    html, body {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      background-color: darkgray; /* لون الخلفية */
+      color: white; /* لون النص */
+    }
+  </style>
+
   <script>
     // The value below is injected by flutter build, do not touch.
     const serviceWorkerVersion = "204858364";
@@ -40,8 +53,8 @@
   <script src="flutter.js" defer></script>
 </head>
 <body>
-  <!-- جاري التحميل -->
-  <div style="text-align: center; padding-top: 50px;">
+  <div>
+    <!-- جاري التحميل -->
     <p>جاري التحميل...</p>
   </div>
 

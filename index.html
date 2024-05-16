@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="$FLUTTER_BASE_HREF">
-
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
@@ -23,11 +8,11 @@
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="akodo">
-  <link rel="apple-touch-icon" href="/web/logoApp.png">
+  <meta name="apple-mobile-web-app-title" content="house_app_one">
+  <link rel="apple-touch-icon" href="web/logoApp.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/web/logoApp.png"/>
+  <link rel="icon" type="image/png" href="web/logoApp.png"/>
 
   <title>house_app_one</title>
   <link rel="manifest" href="manifest.json">
@@ -49,19 +34,29 @@
     }
 
     .loading-logo {
-      width: 100px; /* يمكنك تعديل العرض حسب الحاجة */
-      height: 100px; /* يمكنك تعديل الطول حسب الحاجة */
-      margin-bottom: 20px; /* مسافة بين اللوجو ودائرة التحميل */
+      width: 200px; /* زيادة عرض اللوجو */
+      height: 200px; /* زيادة طول اللوجو */
+      margin-bottom: 30px; /* مسافة بين اللوجو ودائرة التحميل */
     }
 
     .loading-circle {
-      border: 8px solid rgba(255, 255, 255, 0.3);
-      border-top: 8px solid white;
+      border: 12px solid rgba(255, 255, 255, 0.3);
+      border-top: 12px solid white;
       border-radius: 50%;
-      width: 50px;
-      height: 50px;
+      width: 100px; /* زيادة عرض الدائرة */
+      height: 100px; /* زيادة طول الدائرة */
       animation: spin 1s linear infinite;
-      margin: 20px auto;
+      margin: 30px auto; /* مسافة أكبر بين الدائرة والنص */
+    }
+
+    .loading-text {
+      font-size: 24px; /* زيادة حجم الخط للنص */
+    }
+
+    .additional-text {
+      font-size: 18px; /* حجم الخط للنص الإضافي */
+      margin-top: 20px; /* مسافة بين النص الأساسي والنص الإضافي */
+      padding: 0 20px; /* إضافة تباعد من الجوانب */
     }
 
     @keyframes spin {
@@ -72,16 +67,20 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = null;
+    const serviceWorkerVersion = "204858364";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
 </head>
 <body>
   <div class="loading-container">
-    <img src="/web/logoApp.png" alt="Logo" class="loading-logo">
+    <img src="web/logoApp.png" alt="Logo" class="loading-logo">
     <div class="loading-circle"></div>
-    <p>جاري التحميل...</p>
+    <p class="loading-text">جاري التحميل...</p>
+    <p class="additional-text">
+      تطبيق اكودو أول تطبيق لسكن الطلاب المغتربين في جميع أنحاء مصر. 
+      ستجد سكنك المناسب باأفضل الأسعار وأفضل الأماكن.
+    </p>
   </div>
 
   <script>
